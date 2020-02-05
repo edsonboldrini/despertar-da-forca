@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
   @Get()
   getHello(): string {
@@ -12,6 +12,11 @@ export class AppController {
 
   @Get("/sum/:a/:b")
   sum(@Param() params): number {
-    return parseInt(params.a) + parseInt(params.b);
+    return this.appService.sum(parseInt(params.a), parseInt(params.b));
+  }
+
+  @Get("/sum2/:a/:b")
+  sum2(@Param('a') a, @Param('b') b): number {
+    return this.appService.sum(parseInt(a), parseInt(b));
   }
 }
