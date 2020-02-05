@@ -504,7 +504,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <filename>/home/edsonboldrini/src/despertar-da-forca/Clientes</filename>
+    <filename>/home/edsonboldrini/src/despertar-da-forca/pentaho/ClientesAtualizado</filename>
     <filename_field />
     <rownum_field />
     <include_filename>N</include_filename>
